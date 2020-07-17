@@ -1,0 +1,15 @@
+// We're following this naming convention for color variables: http://davidwalsh.name/sass-color-variables-dont-suck
+// Colors are named using this tool: http://chir.ag/projects/name-that-color
+// If 2 colors have the same names generated from the tool above,
+// that means they're too similar, so just use the one that's already on our list
+// Please ALPHABETIZE the colors and have them all in lowercase to prevent dupes
+
+$cl-white: white;
+$cl-red: red;
+$cl-eclipse: #404040;
+$cl-whisper: #eee;
+$cl-caribbean-green: #00d7a0;
+$cl-gainsboro: #d8d8d8;
+$cl-grey: #767676;
+$cl-white-smoke: #f7f7f7;
+$cl-scarlet: #ff3400;

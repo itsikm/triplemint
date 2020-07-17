@@ -1,0 +1,26 @@
+@import "vars";
+
+@mixin viewport($sizes...) {
+  @each $size in $sizes {
+    @media screen and (max-width: map-get($viewports, $size)) {
+      @content;
+    }
+  }
+}
+
+@mixin font-family($fontsPath, $name) {
+  @font-face {
+    font-family: #{$name};
+    src: url("#{$fontsPath}/#{$name}.eot");
+    src: url("#{$fontsPath}/#{$name}.eot?#iefix") format("embedded-opentype"),
+    url("#{$fontsPath}/#{$name}.woff") format("woff"),
+    url("#{$fontsPath}/#{$name}.ttf") format("truetype"),
+    url("#{$fontsPath}/#{$name}.svg##{$name}") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin font($name) {
+  font-family: map-get($fonts, $name), Arial, Helvetica, sans-serif;
+}

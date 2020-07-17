@@ -1,0 +1,17 @@
+@import "mixins";
+
+@each $name, $font in $fonts {
+  @include font-family($fontsPath, $font);
+}
+
+@mixin open-sans-regular() {
+  @include font("OpenSans-Regular");
+}
+
+@mixin open-sans-semi-bold() {
+  @include font("OpenSans-Semibold");
+}
+
+@mixin avenir-book() {
+  @include font("Avenir-Book");
+}

@@ -1,0 +1,116 @@
+@import "vars";
+@import "mixins";
+@import "typography";
+
+:global(*) {
+  @include open-sans-regular;
+}
+
+:global(*, *:before, *:after) {
+  box-sizing: border-box;
+}
+
+:global(html) {
+  box-sizing: border-box;
+  font-size: $size-base;
+}
+
+:global(body) {
+  height: calc(100vh - 55px);
+  margin: 0;
+  padding: 55px 0 0;
+  background-color: $cl-white;
+  color: $cl-eclipse;
+}
+
+:global(a, a:hover, a:active, a:visited) {
+  text-decoration: none;
+  color: $cl-eclipse;
+}
+
+:global(select, input, textarea, button) {
+  outline: none;
+  margin: 0;
+}
+
+:global(select) {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-color: $cl-white;
+  background-image: url('/statics/images/expand.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  color: $cl-eclipse;
+  font-size: $size-14;
+  padding: 6px 30px 6px 10px;
+  border: 1px solid #d8d8d8;
+  resize: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/**
+  Icons
+  NOTE: Icons can be converted to icon font, I'm using the svg to save time right now
+ */
+:global([class^="icon-"]) {
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+:global(.icon-search) {
+  background-image: url('/statics/images/search.svg');
+}
+
+:global(.icon-grid-on) {
+  background-image: url('/statics/images/grid-on.svg');
+}
+
+:global(.icon-grid-off) {
+  background-image: url('/statics/images/grid-off.svg');
+}
+
+:global(.icon-list-on) {
+  background-image: url('/statics/images/list-on.svg');
+}
+
+:global(.icon-list-off) {
+  background-image: url('/statics/images/list-off.svg');
+}
+
+:global(.icon-cards-on) {
+  background-image: url('/statics/images/cards-on.svg');
+}
+
+:global(.icon-cards-off) {
+  background-image: url('/statics/images/cards-off.svg');
+}
+
+:global(.icon-map-on) {
+  background-image: url('/statics/images/map-on.svg');
+}
+
+:global(.icon-map-off) {
+  background-image: url('/statics/images/map-off.svg');
+}
+
+:global(.icon-cardsmap-on) {
+  background-image: url('/statics/images/cardsmap-on.svg');
+}
+
+:global(.icon-cardsmap-off) {
+  background-image: url('/statics/images/cardsmap-off.svg');
+}
+
+:global(.icon-favorite) {
+  background-image: url('/statics/images/favorite.svg');
+}
+:global(.icon-open-house) {
+  background-image: url('/statics/images/icon-openhouse.png');
+}
