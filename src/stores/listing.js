@@ -14,6 +14,10 @@ const store = () => {
     const { subscribe, set, update } = writable({...initialState});
 
     const methods = {
+        /**
+         * Sort By filter
+         * @param {string} type
+         */
         sortBy(type) {
             switch(type) {
                 // order price from high to low
@@ -41,8 +45,17 @@ const store = () => {
                     update(state => (state.results = initialState.results, state));
             }
         },
+
+        /**
+         * Page Layout
+         * @param {string} type
+         */
         layout(type) {
             switch(type) {
+
+                /**
+                 * Display cards and map
+                 */
                 case 'cardsmap':
                     update(state => (state.layout = {
                         cards: true,
@@ -50,6 +63,9 @@ const store = () => {
                     }, state));
                     break;
 
+                /**
+                 * Display only cards
+                 */
                 case 'cards':
                     update(state => (state.layout = {
                         cards: true,
@@ -57,6 +73,9 @@ const store = () => {
                     }, state));
                     break;
 
+                /**
+                 * Display only map
+                 */
                 case 'map':
                     update(state => (state.layout = {
                         cards: false,
@@ -65,6 +84,11 @@ const store = () => {
                     break;
             }
         },
+
+        /**
+         * Toggle between listing picture and floorplan picture
+         * @param {boolean} toggle - show floor plan: true, show listing pictures: false
+         */
         showFloorPlan(toggle) {
             update(state => (state.floorplans = toggle, state));
         }

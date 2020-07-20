@@ -1,6 +1,16 @@
 <script>
     import listingStore from '../../stores/listing';
+
+    /**
+     * Sort filter
+     * @param {Object} e
+     */
     const sortChange = (e) => listingStore.sortBy(e.target.value);
+
+    /**
+     * Floor plane filter
+     * @param {Object} e
+     */
     const floorPlanChange = (e) => listingStore.showFloorPlan(e.target.value === 'true');
 </script>
 
