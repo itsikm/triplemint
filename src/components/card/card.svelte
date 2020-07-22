@@ -5,6 +5,7 @@
     export let neighborhood;
     export let price;
     export let summary;
+    export let timestamp;
     export let openhouse = null;
     export let showplan = false;
 </script>
@@ -125,7 +126,7 @@
             <img src={picture} />
         {/if}
         {#if openhouse}
-            <div class="icon-open-house info-bar open-house">
+            <div class="icon-open-house info-bar open-house testme">
                 <span>Open House</span>
                 {openhouse}
             </div>
