@@ -11,7 +11,7 @@ const mockCard = {
     timestamp: 1595003838763
 };
 
-it('test filters', () => {
+it('test card component', () => {
     mount(Card, {
         props: { ...mockCard }
     });
@@ -44,5 +44,4 @@ it('test filters', () => {
 
     // check for buttons
     cy.get('.favorite').should('be.exist');
-})
-
+});
